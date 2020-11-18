@@ -39,9 +39,9 @@ function ItemTodo(props) {
                             props.moveTodo(props.index, props.index + 1)}>↓
                 </button>
 
-                {!todo.done && <button type="button" class="btn btn-outline-primary"
+                {!todo.done && <button type="button" className="btn btn-outline-primary"
                                        onClick={updateTodoButtonHandler}>Done</button>}
-                {todo.done && <button type="button" class="btn btn-outline-primary"
+                {todo.done && <button type="button" className="btn btn-outline-primary"
                                       onClick={updateTodoButtonHandler}>Undone</button>}
                 <button type="button" className="btn btn-outline-primary"
                         onClick={() => props.deleteTodo(todo.id)}>Delete
@@ -55,16 +55,16 @@ function ItemTodo(props) {
                         value={inputNewTitle}
                         onChange={(e) => setInputNewTitle(e.target.value)}
                     />
-                    <button type="button" class="btn btn-outline-primary"
+                    <button type="button" className="btn btn-outline-primary"
                             onClick={saveTodoButtonHandler}>Save
                     </button>
                 </>
                 }
                 {!isEditModeOn &&
-                <button type="button" class="btn btn-outline-primary"
+                <button type="button" className="btn btn-outline-primary"
                         onClick={() => setIsEditModeOn(!isEditModeOn)}>Edit</button>}
                 {isEditModeOn &&
-                <button type="button" class="btn btn-outline-primary"
+                <button type="button" className="btn btn-outline-primary"
                         onClick={() => setIsEditModeOn(!isEditModeOn)}>Cancel</button>}
             </li>
         </ul>
